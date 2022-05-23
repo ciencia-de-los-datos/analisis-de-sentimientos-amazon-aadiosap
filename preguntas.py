@@ -103,7 +103,7 @@ def pregunta_04():
     from sklearn.model_selection import GridSearchCV
 
     # Cargue las variables.
-    x_train, _, y_train, _ = pregunta_02()
+    x_train, x_test, y_train, y_test = pregunta_02()
 
     # Obtenga el analizador de la pregunta 3.
     analyzer = pregunta_03()
@@ -135,7 +135,7 @@ def pregunta_04():
     # considerar 10 valores entre 0.1 y 1.0 para el parámetro alpha de
     # BernoulliNB.
     param_grid = {
-        "bernoulli_alpha": np.arange(0.1, 1.0, 0.1),
+        "bernoulli__alpha": np.arange(0.1, 1.0, 0.1),
     }
 
     # Defina una instancia de GridSearchCV con el pipeline y el diccionario de
